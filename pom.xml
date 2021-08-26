@@ -34,6 +34,12 @@
 	        <version>5.7.2</version>
 	        <scope>test</scope>
 	    </dependency>
-	</dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 	
 </project>
