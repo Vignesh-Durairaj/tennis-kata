@@ -25,10 +25,15 @@ public class ScoreBoardPrint implements ScoreBoard{
 		
 		if(p1==3 && p2==3) {
 			return "DEUCE";
+		}else if(p1 <= 3 && p2 <= 3 ) {
+			String p1Str = "" + ((p1*15 >= 45) ? 40 : p1*15);
+			String p2Str = "" + ((p2*15 >= 45) ? 40 : p2*15);
+			return p1Str + ":" + p2Str;
+		}else {
+			return (p1 - p2 == 1) ? "p1 advance" : (p1 - p2 > 1) ? "p1 win" : (p2 - p1 == 1) ? "p2 advance" : (p2 - p1 > 1) ? "p2 win" : "DEUCE";
 		}
-		String p1Str = "" + ((p1*15 >= 45) ? 40 : p1*15);
-		String p2Str = "" + ((p2*15 >= 45) ? 40 : p2*15);
-		return p1Str + ":" + p2Str;
+		
+		
 		
 	}
     

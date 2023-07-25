@@ -92,4 +92,76 @@ public class ScoreBoardUnitTest {
 		String expaction = "DEUCE";
 		assertEquals(expaction,result);
 	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_three_to_four() {
+		int p1 = 3;
+		int p2 = 4;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "p2 advance";
+		assertEquals(expaction,result);
+	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_four_to_four() {
+		int p1 = 4;
+		int p2 = 4;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "DEUCE";
+		assertEquals(expaction,result);
+	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_five_to_four() {
+		int p1 = 5;
+		int p2 = 4;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "p1 advance";
+		assertEquals(expaction,result);
+	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_five_to_five() {
+		int p1 = 5;
+		int p2 = 5;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "DEUCE";
+		assertEquals(expaction,result);
+	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_six_to_five() {
+		int p1 = 6;
+		int p2 = 5;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "p1 advance";
+		assertEquals(expaction,result);
+	}
+	
+	@Test
+	public void testScoreCardPrintedInTheBoard_seven_to_five() {
+		int p1 = 7;
+		int p2 = 5;
+		sBoardPrint = new ScoreBoardPrint();
+		sBoardPrint.setP1(p1);
+		sBoardPrint.setP2(p2);
+		String result = sBoardPrint.printScore();
+		String expaction = "p1 win";
+		assertEquals(expaction,result);
+	}
 }
