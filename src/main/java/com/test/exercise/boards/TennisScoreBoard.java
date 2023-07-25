@@ -27,8 +27,16 @@ public class TennisScoreBoard implements ScoreBoard {
 
     @Override
     public String printScore() {
-        if (p1 == 3 && p2 == 3) {
+        if (p1 >= 3 && p1 == p2) {
             return "DEUCE";
+        } else if (p1 >= 3 && p2 >= 3 && p1 > p2 && p1 - p2 == 1) {
+            return "P1-ADV";
+        } else if (p1 >= 3 && p2 >= 3 && p2 > p1 && p2 - p1 == 1) {
+            return "P2-ADV";
+        }  else if (p1 >= 3 && p2 >= 3 && p1 > p2 && p1 - p2 == 2) {
+            return "P1-WINS";
+        } else if (p1 >= 3 && p2 >= 3 && p2 > p1 && p2 - p1 == 2) {
+            return "P2-WINS";
         }
         String score1 = SCORE_MAP.get(p1);
         String score2 = SCORE_MAP.get(p2);

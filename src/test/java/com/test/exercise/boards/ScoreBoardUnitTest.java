@@ -24,7 +24,11 @@ public class ScoreBoardUnitTest {
 		"2, 1, 30:15",
 		"2, 2, 30:30",
 		"3, 2, 40:30",
-		"3, 3, DEUCE"
+		"3, 3, DEUCE",
+		"3, 4, P2-ADV",
+		"4, 4, DEUCE",
+		"5, 4, P1-ADV",
+		"6, 4, P1-WINS"
 	})
 	void givenPoints_whenPrintScore_thenPrintPoints(int p1, int p2, String expected) {
 		//given scores
